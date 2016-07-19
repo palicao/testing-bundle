@@ -22,7 +22,7 @@ class SeleniumTraitTest extends \PHPUnit_Framework_TestCase
      * @see                      \Cosma\Bundle\TestingBundle\TestCase\Traits\SeleniumTrait::getRemoteWebDriver
      *
      * @expectedException \Facebook\WebDriver\Exception\WebDriverCurlException
-     * @expectedExceptionMessage Couldn't resolve host 'selenium.ro'
+     * @expectedExceptionMessageRegExp "Could(n't| not) resolve host"
      */
     public function testGetRemoteWebDriver()
     {

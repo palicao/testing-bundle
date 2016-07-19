@@ -72,7 +72,13 @@ class DumperTest extends \PHPUnit_Framework_TestCase
 
         $classMetaDataInfo = $this->getMockBuilder('\Doctrine\ORM\Mapping\ClassMetadataInfo')
                                   ->disableOriginalConstructor()
-                                  ->setMethods(['getName', 'getIdentifier', 'getFieldNames', 'getFieldValue'])
+                                  ->setMethods([
+                                      'getName',
+                                      'getIdentifier',
+                                      'getFieldNames',
+                                      'getFieldValue',
+                                      'getAssociationMappings'
+                                  ])
                                   ->getMock()
         ;
         $classMetaDataInfo->expects($this->exactly(3))
@@ -249,7 +255,13 @@ class DumperTest extends \PHPUnit_Framework_TestCase
 
         $classMetaDataInfo = $this->getMockBuilder('\Doctrine\ORM\Mapping\ClassMetadataInfo')
                                   ->disableOriginalConstructor()
-                                  ->setMethods(['getName', 'getIdentifier', 'getFieldNames', 'getFieldValue'])
+                                  ->setMethods([
+                                      'getName',
+                                      'getIdentifier',
+                                      'getFieldNames',
+                                      'getAssociationMappings',
+                                      'getFieldValue'
+                                  ])
                                   ->getMock()
         ;
         $classMetaDataInfo->expects($this->exactly(4))

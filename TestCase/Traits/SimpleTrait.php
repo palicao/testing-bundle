@@ -61,7 +61,7 @@ trait SimpleTrait
             throw new EntityNotFoundException();
         }
 
-        $entityModel = $this->getMock($entityName, ['getId']);
+        $entityModel = $this->createMock($entityName, ['getId']);
 
         $entityModel->expects($this->any())
                     ->method('getId')
